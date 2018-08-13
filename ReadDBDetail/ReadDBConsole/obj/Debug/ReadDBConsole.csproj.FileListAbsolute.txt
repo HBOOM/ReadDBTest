@@ -1,0 +1,10 @@
+D:\ReadDB\ReadDBDetail\ReadDBConsole\bin\Debug\ReadDBConsole.exe.config
+D:\ReadDB\ReadDBDetail\ReadDBConsole\bin\Debug\ReadDBConsole.exe
+D:\ReadDB\ReadDBDetail\ReadDBConsole\bin\Debug\ReadDBConsole.pdb
+D:\ReadDB\ReadDBDetail\ReadDBConsole\bin\Debug\EntityFramework.dll
+D:\ReadDB\ReadDBDetail\ReadDBConsole\bin\Debug\EntityFramework.SqlServer.dll
+D:\ReadDB\ReadDBDetail\ReadDBConsole\bin\Debug\EntityFramework.xml
+D:\ReadDB\ReadDBDetail\ReadDBConsole\bin\Debug\EntityFramework.SqlServer.xml
+D:\ReadDB\ReadDBDetail\ReadDBConsole\obj\Debug\ReadDBConsole.csprojResolveAssemblyReference.cache
+D:\ReadDB\ReadDBDetail\ReadDBConsole\obj\Debug\ReadDBConsole.exe
+D:\ReadDB\ReadDBDetail\ReadDBConsole\obj\Debug\ReadDBConsole.pdb

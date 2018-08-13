@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReadDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ClassInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClassTime" Type="DateTime" Precision="3" />
+    <Property Name="UserID" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_ClassInfo_ClassInfo" FromRole="ClassInfo" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserPsw" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Describe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="ClassInfo" Relationship="Self.FK_ClassInfo_ClassInfo" FromRole="UserInfo" ToRole="ClassInfo" />
+    <NavigationProperty Name="UserInfo1" Relationship="Self.FK_UserInfo_UserInfo" FromRole="UserInfo" ToRole="UserInfo1" />
+    <NavigationProperty Name="UserInfo2" Relationship="Self.FK_UserInfo_UserInfo" FromRole="UserInfo1" ToRole="UserInfo" />
+  </EntityType>
+  <Association Name="FK_ClassInfo_ClassInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="ClassInfo" Type="Self.ClassInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ClassInfo">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInfo_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="UserInfo1" Type="Self.UserInfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserInfo1">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ReadDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClassInfo" EntityType="Self.ClassInfo" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" />
+    <AssociationSet Name="FK_ClassInfo_ClassInfo" Association="Self.FK_ClassInfo_ClassInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="ClassInfo" EntitySet="ClassInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInfo_UserInfo" Association="Self.FK_UserInfo_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="UserInfo1" EntitySet="UserInfo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

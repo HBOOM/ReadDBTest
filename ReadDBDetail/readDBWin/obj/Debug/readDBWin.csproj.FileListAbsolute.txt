@@ -1,0 +1,13 @@
+D:\ReadDB\ReadDBDetail\readDBWin\obj\Debug\readDBWin.csprojResolveAssemblyReference.cache
+D:\ReadDB\ReadDBDetail\readDBWin\obj\Debug\readDBWin.Form1.resources
+D:\ReadDB\ReadDBDetail\readDBWin\obj\Debug\readDBWin.Properties.Resources.resources
+D:\ReadDB\ReadDBDetail\readDBWin\obj\Debug\readDBWin.csproj.GenerateResource.Cache
+D:\ReadDB\ReadDBDetail\readDBWin\bin\Debug\readDBWin.exe.config
+D:\ReadDB\ReadDBDetail\readDBWin\bin\Debug\readDBWin.exe
+D:\ReadDB\ReadDBDetail\readDBWin\bin\Debug\readDBWin.pdb
+D:\ReadDB\ReadDBDetail\readDBWin\bin\Debug\EntityFramework.dll
+D:\ReadDB\ReadDBDetail\readDBWin\bin\Debug\EntityFramework.SqlServer.dll
+D:\ReadDB\ReadDBDetail\readDBWin\bin\Debug\EntityFramework.xml
+D:\ReadDB\ReadDBDetail\readDBWin\bin\Debug\EntityFramework.SqlServer.xml
+D:\ReadDB\ReadDBDetail\readDBWin\obj\Debug\readDBWin.exe
+D:\ReadDB\ReadDBDetail\readDBWin\obj\Debug\readDBWin.pdb
